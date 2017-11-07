@@ -16,8 +16,12 @@ with observable streams
 
 它是跨平台的（RxJS，RxJava，RxNET），也就是说掌握 RxSwift 这种思想，学习其他的 Rx 系列的将非常简单。
 
-### 理解RxSwift
-RxSwift是对ReactiveX的实现，它吸取了观察者模式、迭代器模式和函数式编程的精华，使用操作符（过滤，变换，结合等）对事件流进行处理，观察者可以订阅被观察者发出的事件。
+### 总结
+【RxSwift 总结】
+ReactiveX（Reactive Extensions）是通过可观察的流实现异步编程的一种API，它结合了观察者模式、迭代器模式和函数式编程的精华。RxSwift是ReactiveX编程思想的一种实现，几乎每一种语言都会有那么一个Rx[xxxx]框架，比如 RxJava，RxJS 等。Rx 可以概括为，对某些数据流（很广，可以是一些事件等）进行处理，使其变成可观察对象（Observable）序列，这样观察者（observer）就可以订阅这些序列【观察者模式】。然而对于订阅者来说（observer）某些选项（items）并不是自己需要的（需要过滤），某些选项（items）需要转换才能达到自己的目的【操作符 filter, map 等】。迭代模式 (Iterator)，这样集合或者序列中的值就可以进行遍历了。为了提升用户体验，或其它目的，有些操作需要放到特定的线程去执行，比如 UI 操作需要放到主线程，这就涉及到了调度器【调度器 Scheduler】。所以Rx可以这样概括，Rx = Observables + LINQ + Schedulers，其中 LINQ（Language Integrated Query）语言集成查询，比如那些操作符号。
+
+图1是 RxSwift 的简单的应用，从数组中找出 Lefe_x 并显示到 Label 上。
+
 
 ### 【Day1】：修改用户昵称
 用户昵称必须由3-10个字符组成，用户名不合法时显示提示（昵称由3-10个字符组成），且修改按钮不可点击。
@@ -49,7 +53,7 @@ func registerRx() {
 #### 知识点说明
 - 安装 RxSwift 时会安装 RxSwift(对ReactiveX的实现) 和 RxCocoa(对iOS cocoa 层的实现)；
 - orEmpty：主要使 `String?` 类型变为 `String`类型；
-- map：它属于 Rx 变换操作中的一种，主要对Observable发射的数据应用一个函数，执行某种操作，返回经过函数处理过的Observable。Observable可观察的对象，用来被观察者(observe)观察，这样observe可以监听Observable发出的事件；
+- map：它属于 Rx 变换操作中的一种，主要对Observable发射的数据应用一个函数，执行某种操作，返回经过函数处理过的Observable。Observable可观察的对象，用来被观察者(observer)观察，这样observe可以监听Observable发出的事件；
 - share(replay: 1)：
 
 ### 例二：发动态更有条理
@@ -59,3 +63,4 @@ func registerRx() {
 - [Reactivex](http://reactivex.io)
 - [RxSwift 学习指导索引](http://t.swift.gg/d/2-rxswift)
 - [ReactiveX文档中文翻译](https://mcxiaoke.gitbooks.io/rxdocs/content/Intro.html)
+- [realm](https://academy.realm.io/cn/posts/altconf-scott-gardner-reactive-programming-with-rxswift/)

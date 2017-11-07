@@ -20,6 +20,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        observableCreate()
+    }
+    
+    func observableCreate() {
+        let creater = Creater()
+        creater.never()
+        creater.from()
+        creater.of()
     }
     
     func registerRx() {
