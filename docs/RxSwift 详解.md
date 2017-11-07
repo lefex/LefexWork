@@ -31,4 +31,11 @@
 
 - ObserverType 一个协议，并添加了默认实现 onNext，onCompleted，onError；
 - Event：一个枚举，定义了 next，error，completed；
-- 
+
+
+### Observable的创建
+- Never：一个从来不会终止也不好发射任何事件的序列；
+- Empty: 创建一个不发射任何事件，但可以正常终止的序列；
+- Throw：创建一个不发射任何事件，以错误终止的序列；
+- From：把普通的数据转换成可观察的对象；
+- Defer：当订阅者订阅的时候才创建
