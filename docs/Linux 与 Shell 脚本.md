@@ -1,6 +1,6 @@
-### Linux 命令与 Shell 脚本
+# Linux 命令与 Shell 脚本
 
-【Linux文件处理 Day1】
+###【Linux文件处理 Day1】
 前几天主要介绍了正则表达式的使用方法，这一期打算介绍一些 Linux 命令和 Shell 脚本，这些知识虽然不是我们必须要掌握的，但是它可以提高工作效率，而且这些知识对于开发者来说都是通用的，Android，iOS，后端，前端等，都需要一些 Linux 和正则表达式的知识。对于iOS开发者来说，Linux 的一些操作命令是薄弱环节，作者打算花费几天时间总结一下这方面的知识，旨在能够帮助更多同学不再害怕“命令”。如果在文中有不正确的地方，希望同学们能指点小弟一下。
 
 【特别说明】下文提到所有的命令行的根路径均为：/Users/wangsuyan/desktop/linux
@@ -29,7 +29,7 @@ pwd : 当前所在的目录，pwd：/Users/wangsuyan/desktop/linux，这个路�
 - gunzip: 解压文件，gunzip lefe.js.gz；
 - tar: 压缩文件及其子文件，tar -zcvf lefe.tgz ./lefe 压缩文件夹 lefe 为 lefe.tgz, tar -zxvf ./lefe.tgz 解压 lefe.tgz 文件；
 
-【Linux字符处理 Day2】
+###【Linux字符处理 Day2】
 - |：管道，两个命令之间可以使用管道符“|”链接，它可以把一个命令的输入作为下一个命令的输出；
 - grep: 搜索文本,
 - grep day lefe.js 搜索 lefe.js 文件中的 day；
@@ -51,7 +51,7 @@ pwd : 当前所在的目录，pwd：/Users/wangsuyan/desktop/linux，这个路�
 - find ~/Desktop/linux -name 'lefe.js'：查找 ~/Desktop/linux 下文件名为 lefe.js 的文件；
 - find ~/Desktop/linux -name '*.js'：查找 ~/Desktop/linux 下后缀为 ‘js’ 的文件；
 
-【Shell 脚本 Day3】
+###【Shell 脚本 Day3】
 经过前几天对 Linux 命令的学习，已经掌握了大部分常用的命令，但是如果想要做的更好，可以学习一下 Shell 脚本，它可以把多条命令按自己的方式来执行。它可以提高我们的工作效率。比如最常见的是 pod install 命令，每次需要在终端输入：
 
 ```
@@ -102,7 +102,7 @@ Shell 脚本中的 for 循环，if 条件判断。
 
 了解了 Shell 脚本的使用后，下一次将介绍一些它的基本语法，帮助读者可以看懂 Shell 脚本。
 
-【Shell 脚本 Day4】
+###【Shell 脚本 Day4】
 使用 Pod 的同学经常会遇到 `"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation."` 错误，其实是 `[CP] Check Pods Manifest.lock` 这个脚本所起的作用。
 
 Pod 中有 Manifest.lock 和 Podfile.lock 这两个文件，只要这两个文件的内容不一样就会报错上面这个错误。Podfile.lock 是大家共用的文件（用来保证我们每个人的Pod库版本一样），而Manifest.lock是本地的文件（自己用）。而【图2】中这个脚本正是做这样的事情。
