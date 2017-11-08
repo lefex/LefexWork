@@ -241,6 +241,15 @@ Gitflow 是一个非常成功的分支模型，它主要分为2个（master, dev
 
 - 假如想开发登录模块，使用`$ git flow feature start login`，主要创建并切换到 `feature/login` 分支，这时就可以在这个分支上开始工作了。当把登陆模块完成后，使用 `git flow feature finish login` 结束任务，它主要把 `feature/login` 分支合并到了 `develop` 分支，并删除了 `feature/login` 分支，同时切换到了 `develop` 分支。
 
+若 finish 的时候出现错误：fatal: Working tree contains unstaged changes. Aborting.
+
+执行
+
+```
+git add *
+git commit -m 'change'
+```
+
 
 - 开发完成后需要发布版本，`git flow release start 0.1.0` 将创建并切换到 `release/0.1.0` 分支，如果中途有 bug 可以修改，修改完成后 `git flow release finish '0.1.0` 发布版本，这时将切换到主分支。 
 

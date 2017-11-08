@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         observableCreate()
+        
     }
     
     func observableCreate() {
