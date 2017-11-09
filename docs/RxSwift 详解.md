@@ -34,8 +34,53 @@
 
 
 ### Observable的创建
-- Never：一个从来不会终止也不好发射任何事件的序列；
-- Empty: 创建一个不发射任何事件，但可以正常终止的序列；
-- Throw：创建一个不发射任何事件，以错误终止的序列；
-- From：把普通的数据转换成可观察的对象；
-- Defer：当订阅者订阅的时候才创建
+
+Observable 在 RxSwift 中时非常重要的一个概念，普通的数据或者事件可以通过下面的方法来创建 Observable。
+
+- never：一个从来不会终止也不会发射任何事件的序列；
+- empty: 创建一个不发射任何事件，但可以正常终止的序列；
+- throw：创建一个不发射任何事件，以错误终止的序列；
+- defer：当订阅者订阅的时候才创建
+- from：从一个序列中创建可观察的对象，比如数组，字典和集合；
+
+```
+Observable.from(["Lefe", "Lefe_x", "lefex", "wsy", "RxSwift", "RxJava", "iOS", "Node"])
+          .filter({ (text) -> Bool in
+             return text.contains("Lefe")
+          })
+          .map({ (text) -> String in
+             return "My web name is: " + text
+          })
+          .subscribe(onNext: { print($0) })
+          .disposed(by: disposeBag)
+```
+
+- of：以固定的元素创建可观察的对象；
+
+```
+Observable.of("Lefe_x", "lefe").subscribe(onNext: { (text) in
+            print(text)
+        }, onError: { (error) in
+            print(error)
+        }, onCompleted: {
+            print("completed!")
+        }).disposed(by: disposeBag)
+```
+
+- create:
+
+```
+func create() {
+       let observable = Observable<String>.create { (observer) -> Disposable in
+        observer.onNext("Hello lefe, I am here!")
+        observer.onCompleted()
+            return Disposables.create()
+        }
+        
+        observable.subscribe(onNext: { (text) in
+            print(text)
+        }, onError: nil, onCompleted: {
+            print("complete!")
+        }, onDisposed: nil).disposed(by: disposeBag)
+    }
+```

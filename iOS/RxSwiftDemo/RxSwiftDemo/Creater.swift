@@ -33,12 +33,26 @@ class Creater {
     }
     
     func of() {
-        Observable.of("Lefe_x").subscribe(onNext: { (text) in
+        Observable.of("Lefe_x", "lefe").subscribe(onNext: { (text) in
             print(text)
         }, onError: { (error) in
             print(error)
         }, onCompleted: {
             print("completed!")
         }).disposed(by: disposeBag)
+    }
+    
+    func create() {
+       let observable = Observable<String>.create { (observer) -> Disposable in
+        observer.onNext("Hello lefe, I am here!")
+        observer.onCompleted()
+            return Disposables.create()
+        }
+        
+        observable.subscribe(onNext: { (text) in
+            print(text)
+        }, onError: nil, onCompleted: {
+            print("complete!")
+        }, onDisposed: nil).disposed(by: disposeBag)
     }
 }

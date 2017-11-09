@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         creater.never()
         creater.from()
         creater.of()
+        creater.create()
     }
     
     func registerRx() {
