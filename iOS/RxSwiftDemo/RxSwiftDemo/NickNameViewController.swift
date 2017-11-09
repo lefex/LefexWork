@@ -8,16 +8,16 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class NickNameViewController: UIViewController {
 
     let disposeBag = DisposeBag()
 
     @IBOutlet weak var nickNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "昵称"
-        
         DispatchQueue.global().async {
             self.from()
         }

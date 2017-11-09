@@ -46,6 +46,7 @@ class ViewController: UIViewController {
             .bind(to: alertLabel.rx.isHidden)
             .disposed(by: disposeBag)
         
+        
         nickNameValid
             .bind(to: changeButton.rx.isEnabled)
             .disposed(by: disposeBag)
