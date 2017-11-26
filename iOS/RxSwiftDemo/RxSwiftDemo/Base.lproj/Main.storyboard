@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nNf-zO-MPM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nNf-zO-MPM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,6 +58,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="RkY-K4-mk5">
+                        <barButtonItem key="leftBarButtonItem" title="mini" id="ADs-XG-2aC">
+                            <connections>
+                                <segue destination="DjA-lv-jq5" kind="show" id="z5b-Zw-wNa"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Jnw-dX-BfA">
                             <connections>
                                 <segue destination="Tdo-jO-EcW" kind="show" id="dzJ-rs-Mcv"/>
@@ -108,6 +113,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0u8-3Z-RJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1176.8" y="103.89805097451276"/>
+        </scene>
+        <!--Mini View Controller-->
+        <scene sceneID="Avg-oW-7MA">
+            <objects>
+                <viewController id="DjA-lv-jq5" customClass="MiniViewController" customModule="RxSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MwO-q8-Ect">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lefe_x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9o-1U-BeR">
+                                <rect key="frame" x="20" y="148" width="335" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ybV-lA-l6N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入昵称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3O-MJ-3Qn">
+                                <rect key="frame" x="73" y="222" width="226" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="S8f-Mn-kST"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U3O-MJ-3Qn" firstAttribute="leading" secondItem="6AL-mU-NI5" secondAttribute="leading" constant="73" id="IaS-Mj-8s9"/>
+                            <constraint firstItem="U3O-MJ-3Qn" firstAttribute="top" secondItem="D9o-1U-BeR" secondAttribute="bottom" constant="40" id="aXD-P6-JcK"/>
+                            <constraint firstItem="D9o-1U-BeR" firstAttribute="top" secondItem="6AL-mU-NI5" secondAttribute="top" constant="84" id="cqv-Tn-b5C"/>
+                            <constraint firstItem="D9o-1U-BeR" firstAttribute="leading" secondItem="6AL-mU-NI5" secondAttribute="leading" constant="20" id="kc1-qH-LH5"/>
+                            <constraint firstItem="6AL-mU-NI5" firstAttribute="trailing" secondItem="U3O-MJ-3Qn" secondAttribute="trailing" constant="76" id="l84-tV-AgR"/>
+                            <constraint firstItem="6AL-mU-NI5" firstAttribute="trailing" secondItem="D9o-1U-BeR" secondAttribute="trailing" constant="20" id="pcf-Nl-R9h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6AL-mU-NI5"/>
+                    </view>
+                    <connections>
+                        <outlet property="nickNameLabel" destination="D9o-1U-BeR" id="bKL-ZP-4hD"/>
+                        <outlet property="nickNameTextField" destination="U3O-MJ-3Qn" id="dVN-bG-N7R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rEd-jv-VpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="103.89805097451276"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tgB-Vw-mR2">

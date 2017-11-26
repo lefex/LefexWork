@@ -19,6 +19,7 @@
 		23CE76761FB051A9006E5F1A /* Stringsdict File.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 23CE76751FB051A9006E5F1A /* Stringsdict File.stringsdict */; };
 		23FDA18C1FB40D1E002DC1F8 /* TrendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDA18B1FB40D1E002DC1F8 /* TrendManager.swift */; };
 		346714B31FB0A325000E6DAB /* Creater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346714B21FB0A325000E6DAB /* Creater.swift */; };
+		34E967551FB93185002FF07E /* MiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E967541FB93185002FF07E /* MiniViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		23CE76751FB051A9006E5F1A /* Stringsdict File.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = "Stringsdict File.stringsdict"; sourceTree = "<group>"; };
 		23FDA18B1FB40D1E002DC1F8 /* TrendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendManager.swift; sourceTree = "<group>"; };
 		346714B21FB0A325000E6DAB /* Creater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creater.swift; sourceTree = "<group>"; };
+		34E967541FB93185002FF07E /* MiniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniViewController.swift; sourceTree = "<group>"; };
 		B696E31599FFBAB61EEFD4B8 /* Pods_RxSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6026FE82F9B7C5FB717E6E /* Pods-RxSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo/Pods-RxSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				346714B21FB0A325000E6DAB /* Creater.swift */,
 				23A308241FB18C58009EEA97 /* NickNameViewController.swift */,
 				23FDA18B1FB40D1E002DC1F8 /* TrendManager.swift */,
+				34E967541FB93185002FF07E /* MiniViewController.swift */,
 			);
 			path = RxSwiftDemo;
 			sourceTree = "<group>";
@@ -137,6 +140,9 @@
 		23CE76531FAFFDA0006E5F1A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = WangSuyan;
@@ -247,6 +253,7 @@
 				23CE765F1FAFFDA0006E5F1A /* AppDelegate.swift in Sources */,
 				23A308251FB18C58009EEA97 /* NickNameViewController.swift in Sources */,
 				23CE76741FB04B6D006E5F1A /* Protocol.swift in Sources */,
+				34E967551FB93185002FF07E /* MiniViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
