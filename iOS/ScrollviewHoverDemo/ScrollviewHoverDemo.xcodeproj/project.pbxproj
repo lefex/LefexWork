@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19C7F0670EF459376BC24F3D /* libPods-ScrollviewHoverDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2A014652D42121FB5902C9 /* libPods-ScrollviewHoverDemoUITests.a */; };
+		2FB2FBDE7ABF903C06572A48 /* libPods-ScrollviewHoverDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92767DF77BA67C46D397B9AF /* libPods-ScrollviewHoverDemo.a */; };
+		3414A23A1FDF585400845F76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414A2391FDF585400845F76 /* AppDelegate.m */; };
+		3414A23D1FDF585400845F76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414A23C1FDF585400845F76 /* ViewController.m */; };
+		3414A2401FDF585400845F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3414A23E1FDF585400845F76 /* Main.storyboard */; };
+		3414A2421FDF585400845F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3414A2411FDF585400845F76 /* Assets.xcassets */; };
+		3414A2451FDF585400845F76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3414A2431FDF585400845F76 /* LaunchScreen.storyboard */; };
+		3414A2481FDF585400845F76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414A2471FDF585400845F76 /* main.m */; };
+		3414A2521FDF585400845F76 /* ScrollviewHoverDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414A2511FDF585400845F76 /* ScrollviewHoverDemoTests.m */; };
+		3414A25D1FDF585400845F76 /* ScrollviewHoverDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414A25C1FDF585400845F76 /* ScrollviewHoverDemoUITests.m */; };
+		EF609D31A6591CA85E7057DF /* libPods-ScrollviewHoverDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B671040D70F629DC5F1F90A4 /* libPods-ScrollviewHoverDemoTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3414A24E1FDF585400845F76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3414A22D1FDF585400845F76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3414A2341FDF585400845F76;
+			remoteInfo = ScrollviewHoverDemo;
+		};
+		3414A2591FDF585400845F76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3414A22D1FDF585400845F76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3414A2341FDF585400845F76;
+			remoteInfo = ScrollviewHoverDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		321DED63F5EE4D6FD65E4F32 /* Pods-ScrollviewHoverDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewHoverDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewHoverDemoTests/Pods-ScrollviewHoverDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3414A2351FDF585400845F76 /* ScrollviewHoverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollviewHoverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3414A2381FDF585400845F76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3414A2391FDF585400845F76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3414A23B1FDF585400845F76 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3414A23C1FDF585400845F76 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3414A23F1FDF585400845F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3414A2411FDF585400845F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3414A2441FDF585400845F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3414A2461FDF585400845F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3414A2471FDF585400845F76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3414A24D1FDF585400845F76 /* ScrollviewHoverDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollviewHoverDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3414A2511FDF585400845F76 /* ScrollviewHoverDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollviewHoverDemoTests.m; sourceTree = "<group>"; };
+		3414A2531FDF585400845F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3414A2581FDF585400845F76 /* ScrollviewHoverDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollviewHoverDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3414A25C1FDF585400845F76 /* ScrollviewHoverDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollviewHoverDemoUITests.m; sourceTree = "<group>"; };
+		3414A25E1FDF585400845F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A5BBC1FE537320F391539F2 /* Pods-ScrollviewHoverDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewHoverDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewHoverDemo/Pods-ScrollviewHoverDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3F2A014652D42121FB5902C9 /* libPods-ScrollviewHoverDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollviewHoverDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6729163172BC829141B5214D /* Pods-ScrollviewHoverDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewHoverDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewHoverDemoTests/Pods-ScrollviewHoverDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		68FAFA213A098456A498522F /* Pods-ScrollviewHoverDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewHoverDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewHoverDemoUITests/Pods-ScrollviewHoverDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		92767DF77BA67C46D397B9AF /* libPods-ScrollviewHoverDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollviewHoverDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D5EFDBF552A603FA3CAEEE8 /* Pods-ScrollviewHoverDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewHoverDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewHoverDemoUITests/Pods-ScrollviewHoverDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A0963910F6E80BA4A6DEEBB2 /* Pods-ScrollviewHoverDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewHoverDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewHoverDemo/Pods-ScrollviewHoverDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B671040D70F629DC5F1F90A4 /* libPods-ScrollviewHoverDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollviewHoverDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3414A2321FDF585400845F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB2FBDE7ABF903C06572A48 /* libPods-ScrollviewHoverDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3414A24A1FDF585400845F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF609D31A6591CA85E7057DF /* libPods-ScrollviewHoverDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3414A2551FDF585400845F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C7F0670EF459376BC24F3D /* libPods-ScrollviewHoverDemoUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3414A22C1FDF585400845F76 = {
+			isa = PBXGroup;
+			children = (
+				3414A2371FDF585400845F76 /* ScrollviewHoverDemo */,
+				3414A2501FDF585400845F76 /* ScrollviewHoverDemoTests */,
+				3414A25B1FDF585400845F76 /* ScrollviewHoverDemoUITests */,
+				3414A2361FDF585400845F76 /* Products */,
+				FB5D6486BA9F2667A5214799 /* Pods */,
+				D7CB5F8AE00EC4D42D506189 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3414A2361FDF585400845F76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3414A2351FDF585400845F76 /* ScrollviewHoverDemo.app */,
+				3414A24D1FDF585400845F76 /* ScrollviewHoverDemoTests.xctest */,
+				3414A2581FDF585400845F76 /* ScrollviewHoverDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3414A2371FDF585400845F76 /* ScrollviewHoverDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3414A2381FDF585400845F76 /* AppDelegate.h */,
+				3414A2391FDF585400845F76 /* AppDelegate.m */,
+				3414A23B1FDF585400845F76 /* ViewController.h */,
+				3414A23C1FDF585400845F76 /* ViewController.m */,
+				3414A23E1FDF585400845F76 /* Main.storyboard */,
+				3414A2411FDF585400845F76 /* Assets.xcassets */,
+				3414A2431FDF585400845F76 /* LaunchScreen.storyboard */,
+				3414A2461FDF585400845F76 /* Info.plist */,
+				3414A2471FDF585400845F76 /* main.m */,
+			);
+			path = ScrollviewHoverDemo;
+			sourceTree = "<group>";
+		};
+		3414A2501FDF585400845F76 /* ScrollviewHoverDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3414A2511FDF585400845F76 /* ScrollviewHoverDemoTests.m */,
+				3414A2531FDF585400845F76 /* Info.plist */,
+			);
+			path = ScrollviewHoverDemoTests;
+			sourceTree = "<group>";
+		};
+		3414A25B1FDF585400845F76 /* ScrollviewHoverDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3414A25C1FDF585400845F76 /* ScrollviewHoverDemoUITests.m */,
+				3414A25E1FDF585400845F76 /* Info.plist */,
+			);
+			path = ScrollviewHoverDemoUITests;
+			sourceTree = "<group>";
+		};
+		D7CB5F8AE00EC4D42D506189 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92767DF77BA67C46D397B9AF /* libPods-ScrollviewHoverDemo.a */,
+				B671040D70F629DC5F1F90A4 /* libPods-ScrollviewHoverDemoTests.a */,
+				3F2A014652D42121FB5902C9 /* libPods-ScrollviewHoverDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB5D6486BA9F2667A5214799 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A5BBC1FE537320F391539F2 /* Pods-ScrollviewHoverDemo.debug.xcconfig */,
+				A0963910F6E80BA4A6DEEBB2 /* Pods-ScrollviewHoverDemo.release.xcconfig */,
+				321DED63F5EE4D6FD65E4F32 /* Pods-ScrollviewHoverDemoTests.debug.xcconfig */,
+				6729163172BC829141B5214D /* Pods-ScrollviewHoverDemoTests.release.xcconfig */,
+				68FAFA213A098456A498522F /* Pods-ScrollviewHoverDemoUITests.debug.xcconfig */,
+				9D5EFDBF552A603FA3CAEEE8 /* Pods-ScrollviewHoverDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3414A2341FDF585400845F76 /* ScrollviewHoverDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3414A2611FDF585400845F76 /* Build configuration list for PBXNativeTarget "ScrollviewHoverDemo" */;
+			buildPhases = (
+				6E1C57AAC6D0EFF9A7867A62 /* [CP] Check Pods Manifest.lock */,
+				3414A2311FDF585400845F76 /* Sources */,
+				3414A2321FDF585400845F76 /* Frameworks */,
+				3414A2331FDF585400845F76 /* Resources */,
+				0EE63143D37A03F76F295A1A /* [CP] Embed Pods Frameworks */,
+				4835D17586835F974CD0BB7B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScrollviewHoverDemo;
+			productName = ScrollviewHoverDemo;
+			productReference = 3414A2351FDF585400845F76 /* ScrollviewHoverDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3414A24C1FDF585400845F76 /* ScrollviewHoverDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3414A2641FDF585400845F76 /* Build configuration list for PBXNativeTarget "ScrollviewHoverDemoTests" */;
+			buildPhases = (
+				56AF134161BFD3954AF10575 /* [CP] Check Pods Manifest.lock */,
+				3414A2491FDF585400845F76 /* Sources */,
+				3414A24A1FDF585400845F76 /* Frameworks */,
+				3414A24B1FDF585400845F76 /* Resources */,
+				246C7DCDD9D470F89851B1BE /* [CP] Embed Pods Frameworks */,
+				E01C44218F15B4FBB1E12BA0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3414A24F1FDF585400845F76 /* PBXTargetDependency */,
+			);
+			name = ScrollviewHoverDemoTests;
+			productName = ScrollviewHoverDemoTests;
+			productReference = 3414A24D1FDF585400845F76 /* ScrollviewHoverDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3414A2571FDF585400845F76 /* ScrollviewHoverDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3414A2671FDF585400845F76 /* Build configuration list for PBXNativeTarget "ScrollviewHoverDemoUITests" */;
+			buildPhases = (
+				9C60A3FED4B51C6E2C73D6F5 /* [CP] Check Pods Manifest.lock */,
+				3414A2541FDF585400845F76 /* Sources */,
+				3414A2551FDF585400845F76 /* Frameworks */,
+				3414A2561FDF585400845F76 /* Resources */,
+				27CAB0EC23DC81AB80C02424 /* [CP] Embed Pods Frameworks */,
+				E66AAD4F6CA4451DD84C1754 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3414A25A1FDF585400845F76 /* PBXTargetDependency */,
+			);
+			name = ScrollviewHoverDemoUITests;
+			productName = ScrollviewHoverDemoUITests;
+			productReference = 3414A2581FDF585400845F76 /* ScrollviewHoverDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3414A22D1FDF585400845F76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = WSY;
+				TargetAttributes = {
+					3414A2341FDF585400845F76 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3414A24C1FDF585400845F76 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3414A2341FDF585400845F76;
+					};
+					3414A2571FDF585400845F76 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3414A2341FDF585400845F76;
+					};
+				};
+			};
+			buildConfigurationList = 3414A2301FDF585400845F76 /* Build configuration list for PBXProject "ScrollviewHoverDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3414A22C1FDF585400845F76;
+			productRefGroup = 3414A2361FDF585400845F76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3414A2341FDF585400845F76 /* ScrollviewHoverDemo */,
+				3414A24C1FDF585400845F76 /* ScrollviewHoverDemoTests */,
+				3414A2571FDF585400845F76 /* ScrollviewHoverDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3414A2331FDF585400845F76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3414A2451FDF585400845F76 /* LaunchScreen.storyboard in Resources */,
+				3414A2421FDF585400845F76 /* Assets.xcassets in Resources */,
+				3414A2401FDF585400845F76 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3414A24B1FDF585400845F76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3414A2561FDF585400845F76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EE63143D37A03F76F295A1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollviewHoverDemo/Pods-ScrollviewHoverDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		246C7DCDD9D470F89851B1BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollviewHoverDemoTests/Pods-ScrollviewHoverDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27CAB0EC23DC81AB80C02424 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollviewHoverDemoUITests/Pods-ScrollviewHoverDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4835D17586835F974CD0BB7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollviewHoverDemo/Pods-ScrollviewHoverDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56AF134161BFD3954AF10575 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollviewHoverDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E1C57AAC6D0EFF9A7867A62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollviewHoverDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C60A3FED4B51C6E2C73D6F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollviewHoverDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E01C44218F15B4FBB1E12BA0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollviewHoverDemoTests/Pods-ScrollviewHoverDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E66AAD4F6CA4451DD84C1754 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollviewHoverDemoUITests/Pods-ScrollviewHoverDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3414A2311FDF585400845F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3414A23D1FDF585400845F76 /* ViewController.m in Sources */,
+				3414A2481FDF585400845F76 /* main.m in Sources */,
+				3414A23A1FDF585400845F76 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3414A2491FDF585400845F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3414A2521FDF585400845F76 /* ScrollviewHoverDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3414A2541FDF585400845F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3414A25D1FDF585400845F76 /* ScrollviewHoverDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3414A24F1FDF585400845F76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3414A2341FDF585400845F76 /* ScrollviewHoverDemo */;
+			targetProxy = 3414A24E1FDF585400845F76 /* PBXContainerItemProxy */;
+		};
+		3414A25A1FDF585400845F76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3414A2341FDF585400845F76 /* ScrollviewHoverDemo */;
+			targetProxy = 3414A2591FDF585400845F76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3414A23E1FDF585400845F76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3414A23F1FDF585400845F76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3414A2431FDF585400845F76 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3414A2441FDF585400845F76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3414A25F1FDF585400845F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3414A2601FDF585400845F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3414A2621FDF585400845F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5BBC1FE537320F391539F2 /* Pods-ScrollviewHoverDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScrollviewHoverDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsy.ScrollviewHoverDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3414A2631FDF585400845F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0963910F6E80BA4A6DEEBB2 /* Pods-ScrollviewHoverDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScrollviewHoverDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsy.ScrollviewHoverDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3414A2651FDF585400845F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 321DED63F5EE4D6FD65E4F32 /* Pods-ScrollviewHoverDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScrollviewHoverDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsy.ScrollviewHoverDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScrollviewHoverDemo.app/ScrollviewHoverDemo";
+			};
+			name = Debug;
+		};
+		3414A2661FDF585400845F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6729163172BC829141B5214D /* Pods-ScrollviewHoverDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScrollviewHoverDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsy.ScrollviewHoverDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScrollviewHoverDemo.app/ScrollviewHoverDemo";
+			};
+			name = Release;
+		};
+		3414A2681FDF585400845F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68FAFA213A098456A498522F /* Pods-ScrollviewHoverDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScrollviewHoverDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsy.ScrollviewHoverDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScrollviewHoverDemo;
+			};
+			name = Debug;
+		};
+		3414A2691FDF585400845F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D5EFDBF552A603FA3CAEEE8 /* Pods-ScrollviewHoverDemoUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScrollviewHoverDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsy.ScrollviewHoverDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScrollviewHoverDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3414A2301FDF585400845F76 /* Build configuration list for PBXProject "ScrollviewHoverDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3414A25F1FDF585400845F76 /* Debug */,
+				3414A2601FDF585400845F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3414A2611FDF585400845F76 /* Build configuration list for PBXNativeTarget "ScrollviewHoverDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3414A2621FDF585400845F76 /* Debug */,
+				3414A2631FDF585400845F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3414A2641FDF585400845F76 /* Build configuration list for PBXNativeTarget "ScrollviewHoverDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3414A2651FDF585400845F76 /* Debug */,
+				3414A2661FDF585400845F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3414A2671FDF585400845F76 /* Build configuration list for PBXNativeTarget "ScrollviewHoverDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3414A2681FDF585400845F76 /* Debug */,
+				3414A2691FDF585400845F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3414A22D1FDF585400845F76 /* Project object */;
+}
