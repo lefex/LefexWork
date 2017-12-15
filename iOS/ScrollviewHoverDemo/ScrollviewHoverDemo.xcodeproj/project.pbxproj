@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		19C7F0670EF459376BC24F3D /* libPods-ScrollviewHoverDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2A014652D42121FB5902C9 /* libPods-ScrollviewHoverDemoUITests.a */; };
 		2FB2FBDE7ABF903C06572A48 /* libPods-ScrollviewHoverDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92767DF77BA67C46D397B9AF /* libPods-ScrollviewHoverDemo.a */; };
+		3405A6501FE3502800DA6CB4 /* MainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3405A64F1FE3502800DA6CB4 /* MainScrollView.m */; };
+		3405A6531FE3504300DA6CB4 /* MainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3405A6521FE3504300DA6CB4 /* MainTableView.m */; };
 		3414A23A1FDF585400845F76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414A2391FDF585400845F76 /* AppDelegate.m */; };
 		3414A23D1FDF585400845F76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414A23C1FDF585400845F76 /* ViewController.m */; };
 		3414A2401FDF585400845F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3414A23E1FDF585400845F76 /* Main.storyboard */; };
@@ -39,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		321DED63F5EE4D6FD65E4F32 /* Pods-ScrollviewHoverDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewHoverDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewHoverDemoTests/Pods-ScrollviewHoverDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3405A64E1FE3502800DA6CB4 /* MainScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScrollView.h; sourceTree = "<group>"; };
+		3405A64F1FE3502800DA6CB4 /* MainScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScrollView.m; sourceTree = "<group>"; };
+		3405A6511FE3504300DA6CB4 /* MainTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableView.h; sourceTree = "<group>"; };
+		3405A6521FE3504300DA6CB4 /* MainTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableView.m; sourceTree = "<group>"; };
 		3414A2351FDF585400845F76 /* ScrollviewHoverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollviewHoverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3414A2381FDF585400845F76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3414A2391FDF585400845F76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,6 +133,10 @@
 				3414A2431FDF585400845F76 /* LaunchScreen.storyboard */,
 				3414A2461FDF585400845F76 /* Info.plist */,
 				3414A2471FDF585400845F76 /* main.m */,
+				3405A64E1FE3502800DA6CB4 /* MainScrollView.h */,
+				3405A64F1FE3502800DA6CB4 /* MainScrollView.m */,
+				3405A6511FE3504300DA6CB4 /* MainTableView.h */,
+				3405A6521FE3504300DA6CB4 /* MainTableView.m */,
 			);
 			path = ScrollviewHoverDemo;
 			sourceTree = "<group>";
@@ -463,6 +473,8 @@
 			files = (
 				3414A23D1FDF585400845F76 /* ViewController.m in Sources */,
 				3414A2481FDF585400845F76 /* main.m in Sources */,
+				3405A6531FE3504300DA6CB4 /* MainTableView.m in Sources */,
+				3405A6501FE3502800DA6CB4 /* MainScrollView.m in Sources */,
 				3414A23A1FDF585400845F76 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,13 +8,16 @@
 
 #import "ViewController.h"
 #import <Masonry.h>
+#import "MainScrollView.h"
+#import "MainTableView.h"
 
 #define DZHWidth ([UIScreen mainScreen].bounds.size.width)
 #define DZHHeight ([UIScreen mainScreen].bounds.size.height)
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) MainScrollView *scrollView;
+@property (nonatomic, strong) MainTableView *tableView;
 
 @end
 
@@ -32,35 +35,19 @@
     CGFloat itemHeight = 200;
     
     _scrollView = ({
-        UIScrollView *view = [[UIScrollView alloc] initWithFrame:self.view.frame];
-        view.contentSize = CGSizeMake(width, 2*width);
+        MainScrollView *view = [[MainScrollView alloc] initWithFrame:self.view.frame];
+        view.contentSize = CGSizeMake(width, 2*DZHHeight);
         [self.view addSubview:view];
         view;
     });
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:(CGRectMake(0, 0, DZHWidth, DZHHeight))];
-    [self.view addSubview:scrollView];
-    scrollView.contentSize = CGSizeMake(0, 2*DZHHeight);
-    
-    UIView *view1 = [[UIView alloc] initWithFrame:(CGRectMake(0, 0, DZHWidth, 100))];
-    view1.backgroundColor = [UIColor grayColor];
-    [scrollView addSubview:view1];
-    
-    UIView *view2 = [[UIView alloc] initWithFrame:(CGRectMake(0, 102, DZHWidth, 100))];
-    view2.backgroundColor = [UIColor grayColor];
-    [scrollView addSubview:view2];
-    
-    UIView *view3 = [[UIView alloc] initWithFrame:(CGRectMake(0, 204, DZHWidth, 100))];
-    view3.backgroundColor = [UIColor grayColor];
-    [scrollView addSubview:view3];
-    
-    UIView *view4 = [[UIView alloc] initWithFrame:(CGRectMake(0, 306, DZHWidth, 100))];
+    UIView *view4 = [[UIView alloc] initWithFrame:(CGRectMake(0, 0, DZHWidth, itemHeight))];
     view4.backgroundColor = [UIColor grayColor];
-    [scrollView addSubview:view4];
+    [_scrollView addSubview:view4];
     
-    UIView *view5 = [[UIView alloc] initWithFrame:(CGRectMake(0, 408, DZHWidth, 100))];
+    UIView *view5 = [[UIView alloc] initWithFrame:(CGRectMake(0, itemHeight, DZHWidth, 100))];
     view5.backgroundColor = [UIColor purpleColor];
-    [scrollView addSubview:view5];
+    [_scrollView addSubview:view5];
     [view5 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.greaterThanOrEqualTo(self.view.mas_top).priority(1000);
         make.top.equalTo(view4.mas_bottom).offset(2).priority(500);
@@ -68,19 +55,16 @@
         make.left.equalTo(self.view);
     }];
     
-    UIView *view6 = [[UIView alloc] initWithFrame:(CGRectMake(0, 510, DZHWidth, 100))];
-    view6.backgroundColor = [UIColor grayColor];
-    [scrollView addSubview:view6];
+    _tableView = ({
+        MainTableView *view = [[MainTableView alloc] initWithFrame:CGRectMake(0, itemHeight + 100, DZHWidth, 600) style:UITableViewStylePlain];
+        view.delegate = self;
+        view.dataSource = self;
+        [view registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ID"];
+        [_scrollView addSubview:view];
+        view;
+    });
     
-    UIView *view7 = [[UIView alloc] initWithFrame:(CGRectMake(0, 612, DZHWidth, 100))];
-    view7.backgroundColor = [UIColor grayColor];
-    [scrollView addSubview:view7];
-    
-    UIView *view8 = [[UIView alloc] initWithFrame:(CGRectMake(0, 714, DZHWidth, 100))];
-    view8.backgroundColor = [UIColor grayColor];
-    [scrollView addSubview:view8];
-    
-    [scrollView bringSubviewToFront:view5];
+    [_scrollView bringSubviewToFront:view5];
 }
 
 - (UIView *)viewWithBackGroundColor:(UIColor *)color
@@ -91,6 +75,19 @@
         view;
     });
     return view;
+}
+
+#pragma mark - Delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ID" forIndexPath:indexPath];
+    cell.textLabel.text = @"Hello Lefe_x";
+    return cell;
 }
 
 @end

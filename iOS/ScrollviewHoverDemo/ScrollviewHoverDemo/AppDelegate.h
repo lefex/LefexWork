@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, assign) CGPoint offset;
+
++ (AppDelegate *)app;
 
 @end
 
