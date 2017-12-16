@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ATMeConsant.h"
+
+
+@class MainScrollView;
+@protocol MainScrollViewDelegate<NSObject>
+
+- (void)scrollView:(MainScrollView *)scrollView didChangeLinkType:(ATMeLinkScrollType)linkType;
+
+@end
 
 @interface MainScrollView : UIScrollView<UIGestureRecognizerDelegate>
+
+@property (nonatomic, weak) id<MainScrollViewDelegate> mdelegate;
 
 @end

@@ -17,14 +17,25 @@
     self = [super initWithFrame:frame style:style];
     if (self) {
         self.panGestureRecognizer.delegate = self;
-        self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        if (@available(iOS 11.0, *)) {
+            self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
     }
     return self;
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
-    return [AppDelegate app].offset.y > 0;
+    if (self.linkType == ATMeLinkScrollTypeDown && self.contentOffset.y == 0) {
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+//    NSLog(@"😊%@ \n 🐶%@", gestureRecognizer, otherGestureRecognizer);
+    return NO;
 }
 
 

@@ -10,11 +10,12 @@
 #import <Masonry.h>
 #import "MainScrollView.h"
 #import "MainTableView.h"
+#import "ATMeConsant.h"
 
 #define DZHWidth ([UIScreen mainScreen].bounds.size.width)
 #define DZHHeight ([UIScreen mainScreen].bounds.size.height)
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, MainScrollViewDelegate>
 
 @property (nonatomic, strong) MainScrollView *scrollView;
 @property (nonatomic, strong) MainTableView *tableView;
@@ -32,11 +33,12 @@
 {
     // http://www.jianshu.com/p/6519c07b9109
     CGFloat width = CGRectGetWidth(self.view.frame);
-    CGFloat itemHeight = 200;
+    CGFloat itemHeight = kATMeHeaderHeight;
     
     _scrollView = ({
         MainScrollView *view = [[MainScrollView alloc] initWithFrame:self.view.frame];
-        view.contentSize = CGSizeMake(width, 2*DZHHeight);
+        view.contentSize = CGSizeMake(width, CGRectGetHeight(self.view.frame) + itemHeight);
+        view.mdelegate = self;
         [self.view addSubview:view];
         view;
     });
@@ -56,7 +58,7 @@
     }];
     
     _tableView = ({
-        MainTableView *view = [[MainTableView alloc] initWithFrame:CGRectMake(0, itemHeight + 100, DZHWidth, 600) style:UITableViewStylePlain];
+        MainTableView *view = [[MainTableView alloc] initWithFrame:CGRectMake(0, itemHeight + 100, DZHWidth, CGRectGetHeight(self.view.frame) - 100) style:UITableViewStylePlain];
         view.delegate = self;
         view.dataSource = self;
         [view registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ID"];
@@ -89,5 +91,11 @@
     cell.textLabel.text = @"Hello Lefe_x";
     return cell;
 }
+
+- (void)scrollView:(MainScrollView *)scrollView didChangeLinkType:(ATMeLinkScrollType)linkType
+{
+    _tableView.linkType = linkType;
+}
+
 
 @end
