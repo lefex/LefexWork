@@ -1,8 +1,7 @@
 [@Lefe_x](https://weibo.com/5953150140) 就是我，正在做 [#iOS知识小集#](https://github.com/southpeak/iOS-tech-set) ，喜欢分享，努力做一名极客。喜欢分享写作。一名 **iOSer**。**喜欢 Node，微信小程序和前端**。一旦有新的文章，我会第一时间同步到这里和微博。
 
 
-#### iOS
---------------------
+### iOS
 
 * [为什么我还在写 CocoaPods 的教程](https://github.com/lefex/LefexWork/blob/master/blog/iOS/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E8%BF%98%E5%9C%A8%E5%86%99-CocoaPods-%E7%9A%84%E6%95%99%E7%A8%8B.md)
 * [以不一样的方式理解SDWebImage](https://github.com/lefex/LefexWork/blob/master/blog/iOS/%E4%BB%A5%E4%B8%8D%E4%B8%80%E6%A0%B7%E7%9A%84%E6%96%B9%E5%BC%8F%E7%90%86%E8%A7%A3SDWebImage.md)
@@ -23,8 +22,7 @@
 * [Sqlite的使用](https://github.com/lefex/LefexWork/blob/master/blog/common/Sqlite%E7%9A%84%E4%BD%BF%E7%94%A8.md)
 * [JSPatch 使用中遇到的问题汇总](https://github.com/lefex/LefexWork/blob/master/blog/iOS/JSPatch-%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB.md)
 
-#### 微信小程序
---------------------
+### 微信小程序
 
 * [从零开始部署小程序服务器（腾讯云）](https://github.com/lefex/LefexWork/blob/master/blog/miniProgram/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E8%85%BE%E8%AE%AF%E4%BA%91%EF%BC%89.md)
 * [从iOS来看微信小程序](https://github.com/lefex/LefexWork/blob/master/blog/miniProgram/%E4%BB%8EiOS%E6%9D%A5%E7%9C%8B%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.md)
@@ -34,56 +32,49 @@
 * [微信小程序开发(一)：准备](https://github.com/lefex/LefexWork/blob/master/blog/miniProgram/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91(%E4%B8%80)%EF%BC%9A%E5%87%86%E5%A4%87.md)
 
 
-#### Python
---------------------
+### Python
 
 * [更人性化的找出 iOS 中未使用的图](https://github.com/lefex/LefexWork/blob/master/blog/python/%E6%9B%B4%E4%BA%BA%E6%80%A7%E5%8C%96%E7%9A%84%E6%89%BE%E5%87%BA-iOS-%E4%B8%AD%E6%9C%AA%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9B%BE.md)
 * [如何 【1秒】找出国际化文件(en.lproj/Localizable.strings)语法错误](https://github.com/lefex/LefexWork/blob/master/blog/python/%E5%A6%82%E4%BD%95%20%E3%80%901%E7%A7%92%E3%80%91%E6%89%BE%E5%87%BA%E5%9B%BD%E9%99%85%E5%8C%96%E6%96%87%E4%BB%B6.md)
 * [如何找出国际化文件(xxxx.strings)中未国际化的文件](https://github.com/lefex/LefexWork/blob/master/blog/python/%E5%A6%82%E4%BD%95%E6%89%BE%E5%87%BA%E5%9B%BD%E9%99%85%E5%8C%96%E6%96%87%E4%BB%B6(xxxx.strings)%E4%B8%AD%E6%9C%AA%E5%9B%BD%E9%99%85%E5%8C%96%E7%9A%84%E6%96%87%E4%BB%B6.md)
 
 
-#### Node
---------------------
+### Node
 
 * [MongoDB数据库](https://github.com/lefex/LefexWork/blob/master/blog/node/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93.md)
 * [MySQL](https://github.com/lefex/LefexWork/blob/master/blog/node/MySQL.md)
 * [Node 开篇介绍](https://github.com/lefex/LefexWork/blob/master/blog/node/Node-%E5%BC%80%E7%AF%87%E4%BB%8B%E7%BB%8D.md)
 
-#### Shell
---------------------
+### Shell
 
 * [Linux 命令与 Shell 脚本](https://github.com/lefex/LefexWork/blob/master/blog/shell/Linux%20%E4%B8%8E%20Shell%20%E8%84%9A%E6%9C%AC.md)
 
-#### JavaScript
---------------------
+### JavaScript
 
 * [JS Tips](https://github.com/lefex/LefexWork/blob/master/blog/node/JS-Tips.md)
 
-#### ReactNative
---------------------
+### ReactNative
 
 * [RN开发(一)：准备](https://github.com/lefex/LefexWork/blob/master/blog/reactNative/RN%E5%BC%80%E5%8F%91(%E4%B8%80)%EF%BC%9A%E5%87%86%E5%A4%87.md)
 
 
-#### Git
---------------------
+### Git
 
 * [你已经会用 Git 了吗？](https://github.com/lefex/LefexWork/blob/master/blog/git/%E4%BD%A0%E5%B7%B2%E7%BB%8F%E4%BC%9A%E7%94%A8-Git-%E4%BA%86%E5%90%97%EF%BC%9F.md)
 * [Git的使用](https://github.com/lefex/LefexWork/blob/master/blog/git/Git%E7%9A%84%E4%BD%BF%E7%94%A8.md)
 * [iOS git 规范](https://github.com/lefex/LefexWork/blob/master/blog/git/iOS%20git%20%E8%A7%84%E8%8C%83.md)
 
-#### 正则表达式
---------------------
+### 正则表达式
+
 * [【图片+例子】学习正则表达式](http://www.jianshu.com/p/75115e9b2101)
 
 
-#### 工具
---------------------
+### 工具
 
 * [iTerm 提高你的开发效率](https://github.com/lefex/LefexWork/blob/master/blog/common/iTerm--%E6%8F%90%E9%AB%98%E4%BD%A0%E7%9A%84%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87.md)
 
 
-#### 开源项目
+### 开源项目
 
 * [TCZLocalizableTool](https://github.com/lefex/TCZLocalizableTool)
 * [PMFMDB的使用](https://github.com/lefex/LefexWork/blob/master/blog/iOS/PMFMDB%E7%9A%84%E4%BD%BF%E7%94%A8.md)
