@@ -27,3 +27,5 @@ Xcode - Capabilities - Associated Domains
 想输入一个地址，打开地图选中一个地址，返回自己的 APP ，QuickType 上既可以显示刚才的地址
 
 让输入更智能
+
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

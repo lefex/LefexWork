@@ -222,3 +222,5 @@ manner：方式
 fundamentally：根本地，从根本上；基础地
 investigate：研究
 ```
+
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

@@ -136,3 +136,5 @@ func from() {
 - [RxSwift 学习指导索引](http://t.swift.gg/d/2-rxswift)
 - [ReactiveX文档中文翻译](https://mcxiaoke.gitbooks.io/rxdocs/content/Intro.html)
 - [realm](https://academy.realm.io/cn/posts/altconf-scott-gardner-reactive-programming-with-rxswift/)
+
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

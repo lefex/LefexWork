@@ -63,3 +63,5 @@ static NSString* const k10AEFFColor = @"10AEFF";
 ```
 
 ![result.png](http://upload-images.jianshu.io/upload_images/1664496-65035cf2b74a7123.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

@@ -59,10 +59,8 @@ Variable 'value' is used uninitialized whenever 'if' condition is false
 
 ## 推荐阅读
 
-[【iOS 国际化】如何把国际化时需要3天的工作量缩减到10分钟](http://www.jianshu.com/p/2c77f0d108c3)
-[Promise](http://www.jianshu.com/p/6bd083ff11b3)
-[微信iOS数据库是什么样的](http://www.jianshu.com/p/68e9f22f9680)
+- [【iOS 国际化】如何把国际化时需要3天的工作量缩减到10分钟](http://www.jianshu.com/p/2c77f0d108c3)
+- [Promise](http://www.jianshu.com/p/6bd083ff11b3)
+- [微信iOS数据库是什么样的](http://www.jianshu.com/p/68e9f22f9680)
 
-===== 我是有底线的 ======
-[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
-![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

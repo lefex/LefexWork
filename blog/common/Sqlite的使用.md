@@ -1,6 +1,6 @@
 ### 说明
 本文是作者[Lefe](http://www.jianshu.com/p/88957fad1226)所创，转载请注明出处，如果你在阅读的时候发现问题欢迎一起讨论。本文会不断更新。
-###正文
+### 正文
 > 对于iOS应用，我相信有很多人还选择使用sqlite作为数据的持久化操作，但是对于一个还没有接触过sqlite的同学难免会有点不知所措，我记得我曾经刚接触sqlite的时候，花费了不少时间。那是的我不知道如何连变查询，如何创建表，如何使用聚合函数等等。下面这篇文章希望能帮助你少走一些弯路。
 
 ### 一、数据类型：
@@ -13,7 +13,7 @@
 - varchar:字符型
 - NULL：表示没有值              // NULL
 
-###二、终端使用技巧：
+### 二、终端使用技巧：
 
 当你学习使用sqlite的时候，直接在终端输入（这里以mac为例）：sqlite3 database_name，按回车键，比如：<code>sqlite3 wsy.db</code>，不过在使用的过程中有一些技巧帮你更好的查看数据，比如找到创建的所有表，创建表所使用的SQL语句，显示表中的数据的时候连同列名一块显示，等等。
 
@@ -29,7 +29,7 @@
 注意：如果不执行`.header on`，执行`.mode column`和`.width 20`将不会起作用
 
 
-###三、创建数据表：
+### 三、创建数据表：
 会使用终端创建数据库后，你可以直接创建表，当然这里只是为了演示，在真正的开发过程中，可以使用sqlite自己分装一系列操作数据的方法。如果为了省时省力，可以直接使用FMDB。根据实际情况，创建表的时候需要注意哪些字段是主键，哪些字段需要添加约束，表之间如何关联。
 为表添加约束：  
 创建数据库表的时候可以为表添加约束，这样可以避免非法数据插入到数据库中  
@@ -84,7 +84,7 @@ Error: NOT NULL constraint failed: teacher.name
 Run Time: real 0.000 user 0.000158 sys 0.000087
 
 
-###四、插入数据
+### 四、插入数据
 建好表以后就可以想表中插入数据，当然可以一次性插入一行或者多行数据。
 
 格式：
@@ -111,7 +111,7 @@ userId      age
 插入某一列中的某条数据
 INSERT INTO temp_teacher VALUES(1237, (SELECT age FROM teacher WHERE id=1237));
 
-###五、查询数据
+### 五、查询数据
 数据查询在数据库操作中起到了很大的作用，巧妙的使用SQL语句会减少很多的数据处理操作。SELECT命令用一系列子句将很多关系操作组合到一起，每个子句代表一种特定的关系操作。
 
 格式：
@@ -241,7 +241,7 @@ id          name        age         sex
 1235        wsy         20          0         
 1236        wsy         25          1         
 
-###六、连表查询
+### 六、连表查询
 
    连表查询最重要的是两个之间有链接条件，所以设计表的时候需要考虑到表之间的关联。
 废话不多说，通过例子说明，这里创建了一张任务表(task)，和文件表(file),一个任务会有一个或多个附件:
@@ -361,13 +361,13 @@ sqlite> UPDATE teacher SET name='haha', id=1240 WHERE sex=0;
 sqlite> UPDATE teacher SET id='haha' WHERE sex=0;
 Error: UNIQUE constraint failed: teacher.id, teacher.name
 
-###八、数据删除：
+### 八、数据删除：
 
 删除数据中的数据
 例如：删除id＝1234的数据
 sqlite> DELETE FROM teacher WHERE id=1234;
 
-###九、修改表：
+### 九、修改表：
 
 格式：
 ALTER TABLE table_name {RENAME TO name | ADD COLUMN column_name 约束}
@@ -380,7 +380,7 @@ sqlite> ALTER TABLE teacher RENAME TO teacher2;
 
 注意表的主键是不能修改的；
 
-###十、创建索引：
+### 十、创建索引：
 
 索引是一种用来在某种条件下加速查询的结构。但是创建索引后，数据表的大小会增大，而且可能会降低insert、update的操作速度，因为修改表的同时，数据库也必须修改对应的索引。所有创建索引的时候，要选择执行查询比较频繁的字段。
 
@@ -400,7 +400,7 @@ sqlite> CREATE INDEX teacher_id ON teacher(id);
 sqlite> DROP INDEX index_name;
 
 
-###十一、创建视图：
+### 十一、创建视图：
 视图也叫虚拟表，是从基本表中动态产生的数据。
 
 在连表查询中的内连接，使用：
@@ -422,7 +422,7 @@ taskId      name        fileId      name:1      taskId:1
 Run Time: real 0.000 user 0.000202 sys 0.000075
 
 
-###十二、事务：
+### 十二、事务：
 
    事务定义了一组SQL命令的边界，这组命令或者作为一个整体被全部执行，或者都不执行。比如银行转账，A想B转账500，A账户减少500，B账号多500，如果在转账的过程中电力中断或者其他意外情况发生，那么必须中断此次操作。
 
@@ -446,7 +446,7 @@ id          name        age         sex
 1239        hello       26          1           
 
 
-###十三、数据完整性
+### 十三、数据完整性
 
 数据完整性用于定义和保护表内部或表之间的数据关系，主要有以下四种完整性:  
 **1.域完整性**  
@@ -476,7 +476,7 @@ timestamp not null default current_timestamp // 2015-12-22 01:00:16
 **3.用户自定义完整性**
 
 
-###十四、一些技巧：
+### 十四、一些技巧：
 - 执行语句的时候添加：explain query plan,可以查询计划
 
 - sqlite_master表是系统表，它包含所有表，视图，索引和触发器的信息
@@ -491,11 +491,9 @@ sqlite> pragma index_info(taskId_index);
 - 如果一列数据的数据类型不一样，排序将按照以下方式排序：
 NULL，INTEGER, REAL, TEXT, BLOB
 
-###十五、写在最后
+### 十五、写在最后
 
    由于项目对数据库采取了加密，每次出现bug的时候总想到数据库中找一下数据是否异常，可使用sqlite工具的时候必须下载包，然后找到数据库，这时打开数据库，发现数据库是加密的，即使输入正确的密码也不能查看数据库中的数据，每次感觉很头疼。最后实在没办法，自己写了一个查看数据库的小工具（ 
  [ PMFMDB-iOS ](https://github.com/lefex/PMFMDB-iOS)），写的很粗糙，不过一直使用，感觉还行。
 
-===== 我是有底线的 ======
-[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
-![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

@@ -208,16 +208,14 @@ Unable to find a pod with name, author, summary, or description matching `lefeKi
 [微信iOS数据库是什么样的](http://www.jianshu.com/p/68e9f22f9680)
 
 ## 感谢
-[关于 Podfile.lock 带来的痛](http://www.samirchen.com/about-podfile-lock)
+- [关于 Podfile.lock 带来的痛](http://www.samirchen.com/about-podfile-lock)
 
-[BY Blog](http://qiubaiying.top/2017/03/08/CocoaPods%E5%85%AC%E6%9C%89%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%9B%E5%BB%BA/)
+- [BY Blog](http://qiubaiying.top/2017/03/08/CocoaPods%E5%85%AC%E6%9C%89%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%9B%E5%BB%BA/)
 
-[pluto-y](http://www.pluto-y.com/cocoapod-private-pods-and-module-manager/)
+- [pluto-y](http://www.pluto-y.com/cocoapod-private-pods-and-module-manager/)
 
-[Cocoapods](https://guides.cocoapods.org/)
+- [Cocoapods](https://guides.cocoapods.org/)
 
-[Ruby China](https://ruby-china.org/)
+- [Ruby China](https://ruby-china.org/)
 
-===== 我是有底线的 ======
-[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
-![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

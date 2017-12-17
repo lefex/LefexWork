@@ -30,7 +30,7 @@ GRB_groupBuy
 【如何把国际化时需要3天的工作量缩短到10分钟】
 
 
-
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
 
 
 

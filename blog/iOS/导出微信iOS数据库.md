@@ -393,11 +393,9 @@ content: 和普通名片消息的结构一样
 ## 七、总结
 关于IM本地数据库中的消息表非常重要，微信采用了分表的方式来提高性能及速度，但是对于小型的IM APP来说，这种设计方式会增加操作的复杂度，比如全局搜索。但是通过这次分析微信的数据库，我们可以借鉴他的优点。比如对于不确定的字段个数，可以作为一个XML来保存成一个字段，或者JSON，消息和本地的资源更好的联系起来。
 
-本文主要参考：
-https://github.com/Unknwon/wuwen.org/issues/15
-http://www.race604.com/sqlite-insert-or-replace/
+## 参考：
+- https://github.com/Unknwon/wuwen.org/issues/15
+- http://www.race604.com/sqlite-insert-or-replace/
 
 
-===== 我是有底线的 ======
-[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
-![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

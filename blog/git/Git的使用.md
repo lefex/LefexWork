@@ -13,13 +13,10 @@ GitHub就是一个网站，或者说是一个全球最大的开源社区，世�
 
 ![sorceTree.png](http://upload-images.jianshu.io/upload_images/1664496-5255c44894c2503a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-####4.Git服务端
+#### 4.Git服务端
 - **[GitHub](https://github.com/lefex)**：如果免费使用，只能提交一些公开的库，如果想创建私有库，那只能交保护费了。
 
 - **[GitLab](https://gitlab.com/)**：允许创建私有库
 
-===== 我是有底线的 ======
-[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
-![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
 
-
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

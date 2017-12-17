@@ -129,3 +129,6 @@ fi
 
 如何在终端执行脚本：
 假如有个叫 `podlgsk.sh` 的脚本，只要给予它执行权限（`chmod +x podlgsk.sh`），注意只需要给一次执行权限就行，下次运行脚本时就不需要给予执行权限了，然后直接 `./podlgsk.sh` 即可。
+
+
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

@@ -225,14 +225,12 @@ logPrimise.then(^(NSDictionary *resultDict){
 
 ## 参考
 
-[博客](http://dev.dafan.info/detail/204760?p=)
+- [博客](http://dev.dafan.info/detail/204760?p=)
 
-[ES6](http://es6.ruanyifeng.com/#docs/promise)
+- [ES6](http://es6.ruanyifeng.com/#docs/promise)
 
-[Eliyar's Blog](https://eliyar.biz/PromiseKit_101/)
+- [Eliyar's Blog](https://eliyar.biz/PromiseKit_101/)
 
-[Onevcat](https://onevcat.com/2016/12/concurrency/)
+- [Onevcat](https://onevcat.com/2016/12/concurrency/)
 
-===== 我是有底线的 ======
-[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
-![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

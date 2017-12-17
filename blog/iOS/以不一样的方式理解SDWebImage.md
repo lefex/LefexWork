@@ -777,15 +777,10 @@ static char TAG_ACTIVITY_STYLE;
 
 ## 参考
 
-[GCD](http://www.liman123.com/2015/10/21/GCD%E6%80%BB%E7%BB%93/)
+- [GCD](http://www.liman123.com/2015/10/21/GCD%E6%80%BB%E7%BB%93/)
 
-[时序图](http://www.cnblogs.com/ywqu/archive/2009/12/22/1629426.html)
+- [时序图](http://www.cnblogs.com/ywqu/archive/2009/12/22/1629426.html)
 
-[类图](http://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html)
+- [类图](http://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html)
 
-如果您想第一时间看到我们的文章，欢迎关注公众号。
-![微信公众号](http://upload-images.jianshu.io/upload_images/1664496-f94c6e4f349a2f74.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-===== 我是有底线的 ======
-[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
-![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

@@ -272,6 +272,4 @@ Summary of actions:
 
 **注意** 使用 Gitflow 并不会把代码自动提交到远程仓库，需要自己收到提交。远程仓库只有`master` 和 `develop` 分支，`feature`，`release` 和 `hotfix` 分支并不提交到远程仓库，仅本地自己使用。
 
-===== 我是有底线的 ======
-[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
-![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)

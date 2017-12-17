@@ -257,6 +257,4 @@ iOS中我们可以使用`Sqlite`、`Realm`、`NSUserDefault`等对数据做缓�
 
 [微信小程序官网](https://mp.weixin.qq.com/debug/wxadoc/dev/)
 
-===== 我是有底线的 ======
-[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
-![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
