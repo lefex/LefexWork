@@ -45,32 +45,15 @@
 * [MySQL](https://github.com/lefex/LefexWork/blob/master/blog/node/MySQL.md)
 * [Node 开篇介绍](https://github.com/lefex/LefexWork/blob/master/blog/node/Node-%E5%BC%80%E7%AF%87%E4%BB%8B%E7%BB%8D.md)
 
-### Shell
+### 其它
 
 * [Linux 命令与 Shell 脚本](https://github.com/lefex/LefexWork/blob/master/blog/shell/Linux%20%E4%B8%8E%20Shell%20%E8%84%9A%E6%9C%AC.md)
-
-### JavaScript
-
 * [JS Tips](https://github.com/lefex/LefexWork/blob/master/blog/node/JS-Tips.md)
-
-### ReactNative
-
 * [RN开发(一)：准备](https://github.com/lefex/LefexWork/blob/master/blog/reactNative/RN%E5%BC%80%E5%8F%91(%E4%B8%80)%EF%BC%9A%E5%87%86%E5%A4%87.md)
-
-
-### Git
-
 * [你已经会用 Git 了吗？](https://github.com/lefex/LefexWork/blob/master/blog/git/%E4%BD%A0%E5%B7%B2%E7%BB%8F%E4%BC%9A%E7%94%A8-Git-%E4%BA%86%E5%90%97%EF%BC%9F.md)
 * [Git的使用](https://github.com/lefex/LefexWork/blob/master/blog/git/Git%E7%9A%84%E4%BD%BF%E7%94%A8.md)
 * [iOS git 规范](https://github.com/lefex/LefexWork/blob/master/blog/git/iOS%20git%20%E8%A7%84%E8%8C%83.md)
-
-### 正则表达式
-
 * [【图片+例子】学习正则表达式](http://www.jianshu.com/p/75115e9b2101)
-
-
-### 工具
-
 * [iTerm 提高你的开发效率](https://github.com/lefex/LefexWork/blob/master/blog/common/iTerm--%E6%8F%90%E9%AB%98%E4%BD%A0%E7%9A%84%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87.md)
 
 
