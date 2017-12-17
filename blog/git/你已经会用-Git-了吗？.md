@@ -1,4 +1,4 @@
-# 你已经会用 Git 了吗？
+![图片发自简书App](http://upload-images.jianshu.io/upload_images/1664496-8dd82280baa88ffb.jpg)
 
 工作中很多同学已经会使用 Git 了，然而对各个概念比较模糊，这里主要理清 Git 中的各个概念，更好的理解 Git。如果你还不知道如何使用 Git，可以参考 @廖雪峰 [廖雪峰](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000) 的文章。我也是一名 Git 菜鸟，看完 @画渣程序猿mmoaay 写的 Git 教程后，自己利用业余时间从头学习了 Git。更多内容可以参考[官网](https://git-scm.com/)。
 
@@ -211,8 +211,9 @@ fork 别人的代码到自己的账号下，从自己的账号下克隆刚才for
 - .gitignore：忽略要提交的文件
 如果某些文件不希望提交到仓库中，可以使用 `.gitignore` 文件忽略它。[.gitignore](https://github.com/github/gitignore/blob/master/Objective-C.gitignore)
 
-
 ## Git Flow
+
+![图片发自简书App](http://upload-images.jianshu.io/upload_images/1664496-d3069d37f257248b.jpg)
 
 #### 简单介绍
 Gitflow 是一个非常成功的分支模型，它主要分为2个（master, develop）主要的分支和3个（feature, release, hotfix）辅助分支。SourceTree 已经集成了它。它主要有以下几个分支组成：
@@ -240,15 +241,6 @@ Gitflow 是一个非常成功的分支模型，它主要分为2个（master, dev
 
 
 - 假如想开发登录模块，使用`$ git flow feature start login`，主要创建并切换到 `feature/login` 分支，这时就可以在这个分支上开始工作了。当把登陆模块完成后，使用 `git flow feature finish login` 结束任务，它主要把 `feature/login` 分支合并到了 `develop` 分支，并删除了 `feature/login` 分支，同时切换到了 `develop` 分支。
-
-若 finish 的时候出现错误：fatal: Working tree contains unstaged changes. Aborting.
-
-执行
-
-```
-git add *
-git commit -m 'change'
-```
 
 
 - 开发完成后需要发布版本，`git flow release start 0.1.0` 将创建并切换到 `release/0.1.0` 分支，如果中途有 bug 可以修改，修改完成后 `git flow release finish '0.1.0` 发布版本，这时将切换到主分支。 
@@ -279,3 +271,7 @@ Summary of actions:
 ```
 
 **注意** 使用 Gitflow 并不会把代码自动提交到远程仓库，需要自己收到提交。远程仓库只有`master` 和 `develop` 分支，`feature`，`release` 和 `hotfix` 分支并不提交到远程仓库，仅本地自己使用。
+
+===== 我是有底线的 ======
+[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
+![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)

@@ -1,8 +1,6 @@
-# Promise
+**让“回调地狱”滚蛋吧！**
 
-![Promise](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1501901509082&di=3e1d298cfe705ca12b58bcf7721d3d3e&imgtype=0&src=http%3A%2F%2Fp1.121314.com%2Fupload%2F2014%2F07%2F18%2F3cb33c78394249a5826cc7beba5a9a22.jpg)
-
-让“回调地狱”滚蛋吧！
+![timg.jpg](http://upload-images.jianshu.io/upload_images/1664496-874e3c9faff1b2e9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 目前很多语言都支持了异步编程，比如 ES6 中新加的特性，它很好的支持了 `Promise`。相信不久后，Swift 也会支持这种异步编程的方式。不过目前有 [PromiseKit](https://github.com/mxcl/PromiseKit/blob/master/README.zh_CN.md) , 它很好的实现了 `Promise`。使用它完全可以避免“回调地狱”这种问题。
 
@@ -234,3 +232,7 @@ logPrimise.then(^(NSDictionary *resultDict){
 [Eliyar's Blog](https://eliyar.biz/PromiseKit_101/)
 
 [Onevcat](https://onevcat.com/2016/12/concurrency/)
+
+===== 我是有底线的 ======
+[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
+![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)

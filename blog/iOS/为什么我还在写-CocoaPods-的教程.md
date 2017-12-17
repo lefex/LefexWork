@@ -1,5 +1,3 @@
-# 为什么我还在写 CocoaPods 的教程
-
 `CocoaPods` 已经出现很多年了，相信很多同学都会使用，但是你真的知道 `CocoaPods` 是如何工作的吗？
 
 ## RubyGems
@@ -174,20 +172,28 @@ echo "SUCCESS" > "${SCRIPT_OUTPUT_FILE_0}"
 
 **错误总结**
 
-<font color=red>Authentication token is invalid or unverified. Either verify it with the email that was sent or register a new session.</font>
+```
+Authentication token is invalid or unverified. Either verify it with the email that was sent or register a new session.
+```
 
 遇到这个错误说明你还没有注册账号，注册一个邮箱 `pod trunk register wsyxyxs@126.com`
 
 
-<font color=red>WARN  | url: The URL (https://github.com/lefex1/lefeKit) is not reachable</font>
+```
+WARN  | url: The URL (https://github.com/lefex1/lefeKit) is not reachable
+```
 
 确保地址可以正确访问 `https://github.com/lefex1/lefeKit` 应为 `https://github.com/lefex1/lefeKit`
  
-<font color=red>ERROR | [iOS] file patterns: The `source_files` pattern did not match any file.</font>
+```
+ERROR | [iOS] file patterns: The `source_files` pattern did not match any file.
+```
 
 找不到资源文件，在根目录下创建 `Classes` 文件夹，并创建文件。`s.source_files = 'lefeKit/Classes/**/*'`
   
-<font color=red>[!] Unable to find a pod with name, author, summary, or description matching `lefeKit`</font>
+```
+Unable to find a pod with name, author, summary, or description matching `lefeKit`
+```
 
 这个是本地缓存的问题：
 清理缓存 `rm -rf ~/Library/Caches/Cocoapods`，执行 `pod setup`
@@ -195,6 +201,11 @@ echo "SUCCESS" > "${SCRIPT_OUTPUT_FILE_0}"
 ## 技巧
 所有命令后添加 `--verbose`，会显示更多的调试信息。
 
+## 推荐阅读
+
+[【iOS 国际化】如何把国际化时需要3天的工作量缩减到10分钟](http://www.jianshu.com/p/2c77f0d108c3)
+[Promise](http://www.jianshu.com/p/6bd083ff11b3)
+[微信iOS数据库是什么样的](http://www.jianshu.com/p/68e9f22f9680)
 
 ## 感谢
 [关于 Podfile.lock 带来的痛](http://www.samirchen.com/about-podfile-lock)
@@ -206,3 +217,7 @@ echo "SUCCESS" > "${SCRIPT_OUTPUT_FILE_0}"
 [Cocoapods](https://guides.cocoapods.org/)
 
 [Ruby China](https://ruby-china.org/)
+
+===== 我是有底线的 ======
+[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
+![](http://upload-images.jianshu.io/upload_images/1664496-e409f16579811101.jpg)
