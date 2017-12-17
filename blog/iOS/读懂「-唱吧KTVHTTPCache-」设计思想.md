@@ -1,3 +1,7 @@
+# 读懂「 唱吧 KTVHTTPCache 」设计思想
+
+**经过作者的指点，本文更新了日志原理说明，HttpServer 作用，图片缓存**
+
 最近看到各大V转发关于 **唱吧音视频框架 KTVHTTPCache** 的开源消息，首先我非常感谢唱吧 iOS 团队能够无私地把自己的成果开源。我本人对于缓存的设计也比较感兴趣，也喜欢写一些东西，希望能把自己一些小技巧分享给需要的同学，这也是我们 #iOS知识小集# 一直做的事情。抱着好奇的心，想了解一下唱吧是如何设计 [KTVHTTPCache](https://github.com/ChangbaDevs/KTVHTTPCache) 的，没想到越看越难，最后竟然花了将近2天的时间看完了。
 
 ## 安装时解读
@@ -5,10 +9,11 @@
 在进行安装的时候，发现 [KTVHTTPCache](https://github.com/ChangbaDevs/KTVHTTPCache) 主要依赖了 [CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer) 这个库，而 [CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer)  又依赖了 [CocoaAsyncSocket](https://github.com/robbiehanson/CocoaAsyncSocket) 和 [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)。可以肯定一点 `KTVHTTPCache` 使用 [CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer) 作为 HttpServer。
 
 > CocoaHTTPServer is a small, lightweight, embeddable HTTP server for Mac OS X or iOS applications.
-> Sometimes developers need an embedded HTTP server in their app. Perhaps it's a server application with remote monitoring. Or perhaps it's a desktop application using HTTP for the communication backend. Or perhaps it's an iOS app providing over-the-air access to documents. Whatever your reason, CocoaHTTPServer can get the job done 
+
+> Sometimes developers need an embedded HTTP server in their app. Perhaps it's a server application with remote monitoring. Or perhaps it's a desktop application using HTTP for the communication backend. Or perhaps it's an iOS app providing over-the-air access to documents. Whatever your reason, CocoaHTTPServer can get the job done
 
 
-![](http://upload-images.jianshu.io/upload_images/1664496-98e37bff0a177cf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![podinstall.png](http://upload-images.jianshu.io/upload_images/1664496-98e37bff0a177cf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Readme 中提到：
 
@@ -20,7 +25,7 @@ Readme 中提到：
 
 > 其本质是对 HTTP 请求进行缓存，对传输内容并没有限制，因此应用场景不限于音视频在线播放，也可以用于文件下载、图片加载、普通网络请求等场景。 --- KTVHTTPCache
 
-既然这么好使，我们可以试试各种情况，demo 中虽然没有给出其它方式的缓存示例，我们可以探索一下。不过我测试了下载图片的，并没有成功，其它几中情况也就没有试验。我猜测，如果想支持这几种情况，应该需要修改源码（如果作者能看到，忘解答一下，不知道我的猜测是否正确）。
+既然这么好使，我们可以试试各种情况，demo 中虽然没有给出其它方式的缓存示例，我们可以探索一下。不过我测试了下载图片的，并没有成功，其它中情况也就没有试验。我猜测，如果想支持这几种情况，应该需要修改源码（如果作者能看到，忘解答一下，不知道我的猜测是否正确）。
 
 #### 视频缓存（ Demo 中提供，亲测可以）
 
@@ -28,7 +33,7 @@ Readme 中提到：
 
 `[KTVHTTPCache proxyStart:&error];`
 
-- 根据原 url 生成一个 proxy url（代理 Url），并使用代理 url 获取数据，这样 HttpServer 就会截获这次请求。比如原 url 为 `http://lzaiuw.changba.com/userdata/video/940071102.mp4` 它对应的 proxy url 为 
+- 根据原 url 生成一个 proxy url（代理 Url），并使用代理 url 获取数据，这样 HttpServer 就会截获这次请求。比如原 url 为 `http://lzaiuw.changba.com/userdata/video/940071102.mp4` 它对应的 proxy url 为
 
 ```
 http://localhost:53112/request-940071102.mp4?requestType=content&originalURL
@@ -37,7 +42,7 @@ http://localhost:53112/request-940071102.mp4?requestType=content&originalURL
 
 看图会更好理解：
 
-![代理URL](http://upload-images.jianshu.io/upload_images/1664496-41aed5734187fe04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![proxyUrl.png](http://upload-images.jianshu.io/upload_images/1664496-41aed5734187fe04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```
 NSString * proxyURLString = [KTVHTTPCache proxyURLStringWithOriginalURLString:URLString];
@@ -46,18 +51,51 @@ NSString * proxyURLString = [KTVHTTPCache proxyURLStringWithOriginalURLString:UR
 - 播放，注意这里使用的是代理url，进行播放，而不是原url。
 `[AVPlayer playerWithURL:[NSURL URLWithString: proxyURLString]];`
 
-#### 图片缓存（本地没能保存）
+#### 图片缓存
 
-这次试验结果没能成功，在缓存中找不到缓存图片，或许是我少写了什么。
+这次试验结果没能成功，在缓存中找不到缓存图片，或许是我少些了什么。
 
 ```
 - (void)testImageCache
 {
-    NSString *imageUrl = @"http://g.hiphotos.baidu.com/image/pic/item/e824b899a9014c08d8614343007b02087af4f4fa.jpg";
-    NSString *proxyStr = [KTVHTTPCache proxyURLStringWithOriginalURLString:imageUrl];
-    NSURLSessionTask *task2 = [[NSURLSession sharedSession] downloadTaskWithURL:[NSURL URLWithString:proxyStr]];
-    [task2 resume];
+NSString *imageUrl = @"http://g.hiphotos.baidu.com/image/pic/item/e824b899a9014c08d8614343007b02087af4f4fa.jpg";
+NSString *proxyStr = [KTVHTTPCache proxyURLStringWithOriginalURLString:imageUrl];
+NSURLSessionTask *task2 = [[NSURLSession sharedSession] downloadTaskWithURL:[NSURL URLWithString:proxyStr]];
+[task2 resume];
 }
+```
+
+控制台打印出的日志可以发现，图片没能缓存是因为 `content type` 错误导致的，因为 [KTVHTTPCache](https://github.com/ChangbaDevs/KTVHTTPCache) 目前只支持 `video`, `audio` 和 `application/octet-stream` 三种类型的，如果想缓存图片可以添加一种 content type。
+
+```
+KTVHTTPCache[818:16793] KTVHCDataNetworkSource  :   response error
+http://g.hiphotos.baidu.com/image/pic/item/e824b899a9014c08d8614343007b02087af4f4fa.jpg
+content type error
+```
+
+在 `KTVHCDataRequest` 类中的初始化方法中修改
+
+```
+self.acceptContentTypes = @[KTVHCDataContentTypeVideo,
+KTVHCDataContentTypeAudio,
+KTVHCDataContentTypeOctetStream];
+```
+
+为
+
+```
+self.acceptContentTypes = @[KTVHCDataContentTypeVideo,
+KTVHCDataContentTypeAudio,
+KTVHCDataContentTypeOctetStream,
+KTVHCDataContentTypeImage];
+```
+
+这样既可以支持缓存图片的需求。这里作者 @程序员Single 特别提示，如果做图片缓存，不建议使用 HttpServer 做中转，也就不需要 Proxy URL，这样会节省不必要的开销。HttpServer 的主要目的是为了 Hook 播放器的网络请求，从而可以做到缓存数据。可以直接使用 `KTVHTTPCache` 中的方法来生成 Reader 读取数据。可以参考 `KTVHCHTTPResponse` 的实现。
+
+```
++ (KTVHCDataReader *)cacheConcurrentReaderWithRequest:(KTVHCDataRequest *)request；
+
++ (KTVHCDataReader *)cacheSerialReaderWithRequest:(KTVHCDataRequest *)request；
 ```
 
 ## 框架设计
@@ -70,9 +108,9 @@ NSString * proxyURLString = [KTVHTTPCache proxyURLStringWithOriginalURLString:UR
 
 #### HttpServer
 
-这层设计比较简单，主要是用了 [CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer) 来作为本地的 HttpServer。HttpServer 说白了就是一个手机端的服务器，用来与用户（作者说的 client）交互，用户提出数据加载需求后，它会从不同的地方来获取数据源，如果本地没有会从网络中下载数据。它主要的类如图：
+这层设计比较简单，主要是用了 [CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer) 来作为本地的 HttpServer。HttpServer 说白了就是一个手机端的服务器，用来与用户（作者说的 client）交互，用户提出数据加载需求后，它会从不同的地方来获取数据源，如果本地没有会从网络中下载数据。它主要的作用是 hook 播放器的网络请求，进行数据的加载。它主要的类如图：
 
-![](http://upload-images.jianshu.io/upload_images/1664496-7976955175eaf00d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![aonaotu-download-1.png](http://upload-images.jianshu.io/upload_images/1664496-7976955175eaf00d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - KTVHCHTTPServer：是一个单例，用来管理 HttpServer 服务，负责开启或关闭服务；
 - KTVHCHTTPConnection：它继承于 HTTPConnection，表示一个连接，它主要为 HttpServer 提供 Response。
@@ -85,30 +123,30 @@ NSString * proxyURLString = [KTVHTTPCache proxyURLStringWithOriginalURLString:UR
 
 ```
 - (NSObject<HTTPResponse> *)httpResponseForMethod:(NSString *)method URI:(NSString *)path
-{    
-    KTVHCHTTPURL * URL = [KTVHCHTTPURL URLWithServerURIString:path];
-    
-    switch (URL.type)
-    {
-        case KTVHCHTTPURLTypePing:
-        {
-            return [KTVHCHTTPResponsePing responseWithConnection:self];
-        }
-        case KTVHCHTTPURLTypeContent:
-        {
-            KTVHCHTTPRequest * currentRequest = [KTVHCHTTPRequest requestWithOriginalURLString:URL.originalURLString];
-            
-            KTVHCDataRequest * dataRequest = [currentRequest dataRequest];
-            KTVHCHTTPResponse * currentResponse = [KTVHCHTTPResponse responseWithConnection:self dataRequest:dataRequest];
-            
-            return currentResponse;
-        }
-    }
-    return nil;
+{
+KTVHCHTTPURL * URL = [KTVHCHTTPURL URLWithServerURIString:path];
+
+switch (URL.type)
+{
+case KTVHCHTTPURLTypePing:
+{
+return [KTVHCHTTPResponsePing responseWithConnection:self];
+}
+case KTVHCHTTPURLTypeContent:
+{
+KTVHCHTTPRequest * currentRequest = [KTVHCHTTPRequest requestWithOriginalURLString:URL.originalURLString];
+
+KTVHCDataRequest * dataRequest = [currentRequest dataRequest];
+KTVHCHTTPResponse * currentResponse = [KTVHCHTTPResponse responseWithConnection:self dataRequest:dataRequest];
+
+return currentResponse;
+}
+}
+return nil;
 }
 ```
 
-![](http://upload-images.jianshu.io/upload_images/1664496-11bedd0b0787dbac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![connetction.png](http://upload-images.jianshu.io/upload_images/1664496-11bedd0b0787dbac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### DataStroage
 
@@ -116,7 +154,7 @@ NSString * proxyURLString = [KTVHTTPCache proxyURLStringWithOriginalURLString:UR
 
 **需要说明一点，缓存是分片处理的**
 
-![](http://upload-images.jianshu.io/upload_images/1664496-f4aac2d957ce935f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![aonaotu-download.png](http://upload-images.jianshu.io/upload_images/1664496-f4aac2d957ce935f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - KTVHCDataStorage: 是一个单例，它负责管理整个缓存，比如读取、保存和合并缓存；
 - KTVHCDataReader：主要用来读取数据；
@@ -135,21 +173,23 @@ NSString * proxyURLString = [KTVHTTPCache proxyURLStringWithOriginalURLString:UR
 - KTVHCDataUnitPool：数据单元池，它是一个单例，含有一个 KTVHCDataUnitQueue；
 - KTVHCDataUnitQueue：数据单元队列，保存了多个 KTVHCDataUnit，它会以 archive 的方式缓存到本地；
 
-![沙盒目录](http://upload-images.jianshu.io/upload_images/1664496-746172c98823fe9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![dataUnit.png](http://upload-images.jianshu.io/upload_images/1664496-746172c98823fe9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 缓存目录构成
 
 #### 结构
-`05f68836443a1535b73bfcf3c2e86d99` 这个是由请求的原 url，md5 后生成的字符串，其中它的子目录下会有多个文件，命名规则为：urlmd5\_offset_数字。
+`05f68836443a1535b73bfcf3c2e86d99` 这个是由请求的原 url，md5 后生成的字符串，其中它的子目录下会有多个文件，命名规则为：urlmd5\_offset_数字。文件名最后一位数字因为
+
+> Data Storeage 同时支持并行和串行。在并行场景中极端情况可能遇到恰好同时存在两个相同 Offset 的 Network Source，用来保证并行加载的安全性（实际场景中也没遇到过，但在结构设计时把这部分考虑进去了）-- @程序员Single
 
 - 05f68836443a1535b73bfcf3c2e86d99
- - 05f68836443a1535b73bfcf3c2e86d99\_0_0
- - 05f68836443a1535b73bfcf3c2e86d99\_196608_0
- - 05f68836443a1535b73bfcf3c2e86d99\_738108_0
+- 05f68836443a1535b73bfcf3c2e86d99\_0_0
+- 05f68836443a1535b73bfcf3c2e86d99\_196608_0
+- 05f68836443a1535b73bfcf3c2e86d99\_738108_0
 
 沙盒目录：
 
-![](http://upload-images.jianshu.io/upload_images/1664496-801e866ee74d1653.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![cache.png](http://upload-images.jianshu.io/upload_images/1664496-801e866ee74d1653.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 缓存策略
 
@@ -161,6 +201,61 @@ NSString * proxyURLString = [KTVHTTPCache proxyURLStringWithOriginalURLString:UR
 - 本地: 700-799
 - 网络: 800-999
 
+## 日志系统
+
+做音视频项目时，一个好的 Log 管理可以提高调试效率，而 [KTVHTTPCache](https://github.com/ChangbaDevs/KTVHTTPCache) 可以追踪到每一次异常的请求。而且回记录到一个 `KTVHTTPCache.log` 文件中。
+
+```
+KTVHTTPCache[818:16603] Proxy Start Success
+KTVHTTPCache[818:16603] <KTVHCHTTPURL: 0x6040002349e0>  :   alloc
+KTVHTTPCache[818:16603] KTVHCHTTPURL            :   Ping, original url, KTVHCHTTPURLPingResponseFile
+KTVHTTPCache[818:16603] KTVHCHTTPURL            :   proxy url, http://localhost:49816/request-KTVHCHTTPURLPingResponseFile?requestType=ping&originalURL=KTVHCHTTPURLPingResponseFile
+KTVHTTPCache[818:16603] <KTVHCHTTPURL: 0x6040002349e0>  :   dealloc
+KTVHTTPCache[818:16795] <KTVHCHTTPConnection: 0x6000001331a0>  :   alloc
+KTVHTTPCache[818:16793] KTVHCHTTPConnection     :   receive request, GET, /request-KTVHCHTTPURLPingResponseFile?requestType=ping&originalURL=KTVHCHTTPURLPingResponseFile
+KTVHTTPCache[818:16793] <KTVHCHTTPURL: 0x604000238b00>  :   alloc
+KTVHTTPCache[818:16793] KTVHCHTTPURL            :   Server URI, /request-KTVHCHTTPURLPingResponseFile?requestType=ping&originalURL=KTVHCHTTPURLPingResponseFile, original url, KTVHCHTTPURLPingResponseFile, type, 0
+KTVHTTPCache[818:16793] <KTVHCHTTPResponsePing: 0x604000238b40>  :   alloc
+KTVHTTPCache[818:16793] <KTVHCHTTPURL: 0x604000238b00>  :   dealloc
+KTVHTTPCache[818:16793] KTVHCHTTPResponsePing   :   conetnt length, 4
+KTVHTTPCache[818:16793] KTVHCHTTPResponsePing   :   read data length, 4, offset, 4 pang
+KTVHTTPCache[818:16793] KTVHCHTTPResponsePing   :   check done, 1
+KTVHTTPCache[818:16793] KTVHCHTTPResponsePing   :   connection did close, 4, 4
+KTVHTTPCache[818:16793] <KTVHCHTTPResponsePing: 0x604000238b40>  :   dealloc
+KTVHTTPCache[818:16603] KTVHCHTTPServer         :   ping result, 1
+```
+
+日志的定义主要在类 `KTVHCLog` 中定义了一些宏。可以通过下面的方法开启日志：
+
+```
+// 开启控制台打印
+[KTVHTTPCache logSetConsoleLogEnable:YES];
+// 开启本地日志记录
+[KTVHTTPCache logSetRecordLogEnable:YES];
+```
+
+特别说明一点可以控制到每个类是否打印：
+
+```
+KTVHCLogEnable(HTTPServer, YES, YES)
+```
+
+主要一个日志的方法：
+
+```
+#define KTVHCLogging(target, console_log_enable, record_log_enable, ...)            \
+if ((console_log_enable) || (record_log_enable))       \
+{                                                                                   \
+NSString * va_args = [NSString stringWithFormat:__VA_ARGS__];                   \
+NSString * log = [NSString stringWithFormat:@"%@  :   %@", target, va_args];    \
+if (record_log_enable) {                      \
+NSLog(@"%@", log);;                                          \
+}                                                                               \
+if (console_log_enable) {                    \
+NSLog(@"%@", log);                                                          \
+}                                                                               \
+}
+```
 
 ## 总结
 
@@ -168,7 +263,7 @@ NSString * proxyURLString = [KTVHTTPCache proxyURLStringWithOriginalURLString:UR
 
 - 职责明确，每个类的作用定义明确；
 - `KTVHCDataFileSource` 和 `KTVHCDataNetworkSource`，使用协议 `KTVHCDataSourceProtocol` 的方式实现不同的 Source，而不用继承，耦合性更低；
-- 使用简单，内部定义复杂，环环相扣；
+- 使用简单，内部定义复杂，缓缓相扣；
 - 使用 NSLock 保证线程安全；
 - 日志定义周全，调试更容易；
 
