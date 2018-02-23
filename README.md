@@ -44,6 +44,10 @@
 * [MySQL](https://github.com/lefex/LefexWork/blob/master/blog/node/MySQL.md)
 * [Node 开篇介绍](https://github.com/lefex/LefexWork/blob/master/blog/node/Node-%E5%BC%80%E7%AF%87%E4%BB%8B%E7%BB%8D.md)
 
+### C++
+
+* [iOS 开发者应该掌握些 C++ 知识](https://github.com/lefex/LefexWork/blob/master/blog/node/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93.md)
+
 ### 其它
 
 * [Linux 命令与 Shell 脚本](https://github.com/lefex/LefexWork/blob/master/blog/shell/Linux%20%E4%B8%8E%20Shell%20%E8%84%9A%E6%9C%AC.md)
