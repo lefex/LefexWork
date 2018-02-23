@@ -46,7 +46,7 @@
 
 ### C++
 
-* [iOS 开发者应该掌握些 C++ 知识](https://github.com/lefex/LefexWork/blob/master/blog/node/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93.md)
+* [iOS 开发者应该掌握些 C++ 知识](https://github.com/lefex/LefexWork/blob/master/blog/C%2B%2B/iOS%20%E5%BC%80%E5%8F%91%E8%80%85%E5%BA%94%E8%AF%A5%E6%8E%8C%E6%8F%A1%E4%BA%9B%20C%2B%2B%20%E7%9F%A5%E8%AF%86.md)
 
 ### 其它
 

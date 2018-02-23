@@ -416,3 +416,7 @@ public:
 ### 总结
 
 总的来说，这些内容是最基本的语法知识，希望可以帮你入门 C++。
+
+===== 我是有底线的 ======
+
+[喜欢我的文章，欢迎关注我的新浪微博 Lefe_x，我会不定期的分享一些开发技巧](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
