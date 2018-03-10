@@ -10,6 +10,12 @@
 
 void lefexTimerAction(CFRunLoopTimerRef timer, void *info){
     NSLog(@"timer called at thread: %@", [NSThread currentThread]);
+    TimerViewController *vc = (__bridge TimerViewController *)info;
+    vc.count++;
+    
+    if (vc.count == 3) {
+        [NSThread exit];
+    }
 }
 
 @interface TimerViewController ()
@@ -22,6 +28,7 @@ void lefexTimerAction(CFRunLoopTimerRef timer, void *info){
      */
     NSThread *currentThread;
 }
+
 @end
 
 @implementation TimerViewController

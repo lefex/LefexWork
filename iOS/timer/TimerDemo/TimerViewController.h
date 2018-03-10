@@ -10,4 +10,6 @@
 
 @interface TimerViewController : UIViewController
 
+@property (nonatomic, assign) NSInteger count;
+
 @end
