@@ -330,3 +330,5 @@ Web浏览器和服务器之间全双工通信标准。一旦 Web 服务器与客
 
 主要介绍了常见的安全攻击。
 
+
+[喜欢我的文章，欢迎关注我 @Lefe_x](http://www.weibo.com/5953150140/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
