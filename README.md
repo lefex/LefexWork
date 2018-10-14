@@ -21,6 +21,11 @@
 * [Block-使用总结](https://github.com/lefex/LefexWork/blob/master/blog/iOS/Block-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93.md)
 * [Sqlite的使用](https://github.com/lefex/LefexWork/blob/master/blog/common/Sqlite%E7%9A%84%E4%BD%BF%E7%94%A8.md)
 * [JSPatch 使用中遇到的问题汇总](https://github.com/lefex/LefexWork/blob/master/blog/iOS/JSPatch-%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB.md)
+* [一本走心的 JS-Native 交互电子书](https://mp.weixin.qq.com/s/vHhb6daVmmFmaqkSl5D_dQ)
+* [专为你定制的 JS/Natvie 交互专题](https://mp.weixin.qq.com/s/u2n42uN7IzZXRKcKp8v3vg)
+* [《iOS 应用逆向与安全》读后感](https://mp.weixin.qq.com/s/uv-Bju1v1-y6TQntmHnCCg)
+* [给微信添加聊天记录截图功能](https://mp.weixin.qq.com/s/TpwZtPu0DKOwm2d6B9fTmg)
+* [谈一谈音频播放器的实现](https://mp.weixin.qq.com/s/1Y2hbg7SVPdFitl7kOO99A)
 
 ### 微信小程序
 
